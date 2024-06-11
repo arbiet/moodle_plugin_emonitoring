@@ -1,0 +1,45 @@
+<?php  // Moodle configuration file
+
+unset($CFG);
+global $CFG;
+$CFG = new stdClass();
+
+$CFG->debug = (E_ALL | E_STRICT);
+$CFG->dbtype    = 'mariadb';
+$CFG->dblibrary = 'native';
+$CFG->dbhost    = '203.175.9.126';
+$CFG->dbname    = 'ikiz5613_moodle_amalia';
+$CFG->dbuser    = 'ikiz5613_moodle_amalia';
+$CFG->dbpass    = '@ppanime';
+//$CFG->dbhost    = 'localhost';
+//$CFG->dbname    = 'moodle-amalia2';
+//$CFG->dbuser    = 'root';
+//$CFG->dbpass    = '';
+$CFG->prefix    = 'mdl_';
+$CFG->dboptions = array (
+  'dbpersist' => 0,
+  'dbport' => '',
+  'dbsocket' => '',
+  'dbcollation' => 'utf8mb4_unicode_ci',
+);
+
+// $CFG->wwwroot   = 'http://7a66-103-144-169-143.ngrok-free.app/moodle';
+// $CFG->wwwroot   = 'https://tljtech.my.id/moodle-amalia';
+// $CFG->wwwroot   = 'http://ikimukti.pagekite.me/moodle
+// $CFG->wwwroot   = 'http://amaliapuspitasari57.pagekite.me/moodle-amalia';
+// $CFG->wwwroot   = 'http://100.89.209.121/moodle';
+// $CFG->wwwroot   = 'http://100.75.231.115/moodle-amalia';
+// $CFG->wwwroot   = 'http://twelve-dots-lie.loca.lt//moodle-amalia';
+// $CFG->wwwroot   = 'http://f8ec37f71670.ngrok.app/moodle-amalia';
+// $CFG->wwwroot   = 'http://localhost/moodle-amalia';
+$CFG->wwwroot   = 'http://localhost/moodle-amalia2';
+// $CFG->dataroot  = '/home/ikimukti/moodledata-amalia';
+$CFG->dataroot  = '/';
+$CFG->admin     = 'admin';
+
+$CFG->directorypermissions = 0777;
+$CFG->slasharguments = false;
+require_once(__DIR__ . '/lib/setup.php');
+
+// There is no php closing tag in this file,
+// it is intentional because it prevents trailing whitespace problems!
